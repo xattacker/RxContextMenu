@@ -52,7 +52,13 @@ class RxContextMenu
         return Observable.just(TRIGGER).compose(ensure(*items))
     }
 
-    fun <T> ensure(vararg items: MenuItemPack): ObservableTransformer<T, MenuItem>
+    fun request(items: List<MenuItemPack>): Observable<MenuItem>
+    {
+        val array = items.toTypedArray()
+        return Observable.just(TRIGGER).compose(ensure(*array))
+    }
+
+    private fun <T> ensure(vararg items: MenuItemPack): ObservableTransformer<T, MenuItem>
     {
         return ObservableTransformer {
             o ->
