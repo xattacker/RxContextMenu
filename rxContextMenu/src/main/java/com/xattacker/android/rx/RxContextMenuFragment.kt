@@ -1,14 +1,14 @@
 package com.xattacker.android.rx
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
 import io.reactivex.subjects.PublishSubject
 import java.util.*
 
-internal class RxContextMenuFragment : Fragment()
+internal class RxContextMenuFragment : androidx.fragment.app.Fragment()
 {
     private val menuItems = ArrayList<MenuItemPack>()
 

@@ -1,9 +1,9 @@
 package com.xattacker.android.rx
 
-import android.support.annotation.VisibleForTesting
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
-import android.support.v4.app.FragmentManager
+import androidx.annotation.VisibleForTesting
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import android.view.MenuItem
 import android.view.View
 import io.reactivex.Observable
@@ -27,12 +27,12 @@ class RxContextMenu
         private val TRIGGER = Any()
     }
 
-    constructor(activity: FragmentActivity)
+    constructor(activity: androidx.fragment.app.FragmentActivity)
     {
         fragment = getLazySingleton(activity.supportFragmentManager)
     }
 
-    constructor(fragment: Fragment)
+    constructor(fragment: androidx.fragment.app.Fragment)
     {
         this.fragment = getLazySingleton(fragment.childFragmentManager)
     }
@@ -91,7 +91,7 @@ class RxContextMenu
         return Observable.concat(Observable.fromArray(fragment.get().publishSubject))
     }
 
-    private fun getLazySingleton(fragmentManager: FragmentManager): Lazy<RxContextMenuFragment>
+    private fun getLazySingleton(fragmentManager: androidx.fragment.app.FragmentManager): Lazy<RxContextMenuFragment>
     {
         return object : Lazy<RxContextMenuFragment>
         {
@@ -110,7 +110,7 @@ class RxContextMenu
         }
     }
 
-    private fun getFragment(fragmentManager: FragmentManager): RxContextMenuFragment
+    private fun getFragment(fragmentManager: androidx.fragment.app.FragmentManager): RxContextMenuFragment
     {
         var fragment = findFragment(fragmentManager)
         if (fragment == null)
@@ -122,7 +122,7 @@ class RxContextMenu
         return fragment
     }
 
-    private fun findFragment(fragmentManager: FragmentManager): RxContextMenuFragment?
+    private fun findFragment(fragmentManager: androidx.fragment.app.FragmentManager): RxContextMenuFragment?
     {
         return fragmentManager.findFragmentByTag(TAG) as RxContextMenuFragment?
     }
