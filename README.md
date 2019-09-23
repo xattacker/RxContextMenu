@@ -34,4 +34,7 @@ dependencies {
 
 	val view = findViewById<View>(R.id.button_1)
         rxContextMenu.registerForContextMenu(view)
+	
+	// show menu
+	view.showContextMenu()
 ``` 
