@@ -22,6 +22,7 @@ dependencies {
 
 ### How to use:
 ``` 
+	// register menu and subscribe click event
         val rxContextMenu = RxContextMenu(this)
         rxContextMenu.request(
             MenuItemPack(0, 1, "aaaa"),
