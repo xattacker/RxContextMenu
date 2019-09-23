@@ -3,7 +3,21 @@ a Android RX ContextMenu Component
 
 make Android ContextMenu using more easily
 
-### how to use:
+### Setup:
+``` 
+allprojects {
+    repositories {
+        ...
+        jcenter()
+    }
+}
+
+dependencies {
+    implementation 'com.xattacker.android:RxContextMenu:1.0.0'
+}
+``` 
+
+### How to use:
 ``` 
         val rxContextMenu = RxContextMenu(this)
         rxContextMenu.request(
