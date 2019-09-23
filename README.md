@@ -4,6 +4,9 @@ a Android RX ContextMenu Component
 make Android ContextMenu using more easily
 
 ### Setup:
+
+minSdkVersion: 19
+
 ``` 
 allprojects {
     repositories {
