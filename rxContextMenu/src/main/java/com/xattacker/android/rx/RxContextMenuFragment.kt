@@ -1,7 +1,6 @@
 package com.xattacker.android.rx
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
@@ -55,6 +54,10 @@ internal class RxContextMenuFragment : androidx.fragment.app.Fragment()
     internal fun addMenuItem(item: MenuItemPack)
     {
         menuItems.add(item)
-        publishSubject = PublishSubject.create()
+
+        if (publishSubject == null)
+        {
+            publishSubject = PublishSubject.create()
+        }
     }
 }

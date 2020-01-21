@@ -1,15 +1,17 @@
 package com.xattacker.android.sample
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.xattacker.android.rx.MenuItemPack
 import com.xattacker.android.rx.RxContextMenu
 
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+class MainActivity : AppCompatActivity()
+{
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         val rxContextMenu = RxContextMenu(this)
