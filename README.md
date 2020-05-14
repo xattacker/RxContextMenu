@@ -5,7 +5,7 @@ make Android ContextMenu using more easily
 
 ### Setup:
 
-minSdkVersion: 19
+minSdkVersion: 15
 
 ``` 
 allprojects {
@@ -16,7 +16,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.xattacker.android:RxContextMenu:1.0.0'
+    implementation 'com.xattacker.android:RxContextMenu:1.0.2'
 }
 ``` 
 
