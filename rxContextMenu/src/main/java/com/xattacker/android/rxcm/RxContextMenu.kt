@@ -1,9 +1,6 @@
-package com.xattacker.android.rx
+package com.xattacker.android.rxcm
 
 import androidx.annotation.VisibleForTesting
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
 import android.view.MenuItem
 import android.view.View
 import io.reactivex.Observable

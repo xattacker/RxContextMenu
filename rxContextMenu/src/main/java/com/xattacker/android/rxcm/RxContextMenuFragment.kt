@@ -1,4 +1,4 @@
-package com.xattacker.android.rx
+package com.xattacker.android.rxcm
 
 import android.os.Bundle
 import android.view.ContextMenu

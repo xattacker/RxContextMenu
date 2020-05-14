@@ -3,8 +3,8 @@ package com.xattacker.android.sample
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.xattacker.android.rx.MenuItemPack
-import com.xattacker.android.rx.RxContextMenu
+import com.xattacker.android.rxcm.MenuItemPack
+import com.xattacker.android.rxcm.RxContextMenu
 
 class MainActivity : AppCompatActivity()
 {
