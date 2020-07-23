@@ -5,7 +5,7 @@ make Android ContextMenu using more easily
 
 ### Setup:
 
-minSdkVersion: 15
+minSdkVersion: 15 [ ![Download](https://api.bintray.com/packages/xattacker/maven/RxContextMenu/images/download.svg?version=1.0.2) ](https://bintray.com/xattacker/maven/RxContextMenu/1.0.2/link)
 
 ``` 
 allprojects {
