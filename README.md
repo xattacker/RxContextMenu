@@ -1,5 +1,5 @@
 # RxContextMenu
-a Android RX ContextMenu Component
+an Android RX ContextMenu Component
 
 make Android ContextMenu using more easily
 
