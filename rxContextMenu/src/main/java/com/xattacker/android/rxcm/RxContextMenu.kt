@@ -70,7 +70,7 @@ class RxContextMenu
 
     private fun request(trigger: Observable<*>, vararg items: MenuItemPack): Observable<MenuItem>
     {
-        if (items.size == 0)
+        if (items.isNullOrEmpty())
         {
             throw IllegalArgumentException("RxContextMenu.request/requestEach requires at least one input menuItem")
         }
@@ -92,24 +92,21 @@ class RxContextMenu
     {
         return object : Lazy<RxContextMenuFragment>
         {
-            private var fragment: RxContextMenuFragment? = null
+            private val fragment by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
+                getFragment(fragmentManager)
+            }
 
             @Synchronized
             override fun get(): RxContextMenuFragment
             {
-                if (fragment == null)
-                {
-                    fragment = getFragment(fragmentManager)
-                }
-
-                return fragment!!
+                return fragment
             }
         }
     }
 
     private fun getFragment(fragmentManager: androidx.fragment.app.FragmentManager): RxContextMenuFragment
     {
-        var fragment = findFragment(fragmentManager)
+        var fragment = fragmentManager.findFragmentByTag(TAG) as RxContextMenuFragment?
         if (fragment == null)
         {
             fragment = RxContextMenuFragment()
@@ -117,10 +114,5 @@ class RxContextMenu
         }
 
         return fragment
-    }
-
-    private fun findFragment(fragmentManager: androidx.fragment.app.FragmentManager): RxContextMenuFragment?
-    {
-        return fragmentManager.findFragmentByTag(TAG) as RxContextMenuFragment?
     }
 }
