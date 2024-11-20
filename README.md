@@ -5,18 +5,19 @@ make Android ContextMenu using more easily
 
 ### Setup:
 
-minSdkVersion: 15 [ ![Download](https://api.bintray.com/packages/xattacker/maven/RxContextMenu/images/download.svg?version=1.0.2) ](https://bintray.com/xattacker/maven/RxContextMenu/1.0.2/link)
+minSdkVersion: 15 
 
 ``` 
 allprojects {
     repositories {
         ...
-        jcenter()
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
     }
 }
 
 dependencies {
-    implementation 'com.xattacker.android:RxContextMenu:1.0.2'
+    implementation 'com.github.xattacker:RxContextMenu:1.0.2'
 }
 ``` 
 
